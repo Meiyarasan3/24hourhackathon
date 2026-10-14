@@ -1,0 +1,17 @@
+@keyframes synapse-wall-rise {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+.synapse-wall-track {
+  animation: synapse-wall-rise var(--wall-duration, 80s) linear infinite;
+  will-change: transform;
+}
+
+.synapse-wall-track.is-paused {
+  animation-play-state: paused;
+}
